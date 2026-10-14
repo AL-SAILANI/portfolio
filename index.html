@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en" data-lang="en" dir="ltr">
+<head>
+<title>Mohammed Alsailani</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Mohammed Alsailani — recent MIS graduate (Odoo ERP, web and mobile projects). Portfolio, experience and certificates.">
+<meta property="og:title" content="Mohammed Alsailani — Portfolio">
+<meta property="og:description" content="Recent MIS graduate · Odoo ERP · Web & mobile projects">
+<meta property="og:image" content="/img/photo.webp">
+<meta name="theme-color" content="#151A21">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{color-scheme:light;-webkit-text-size-adjust:100%}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Layout: one calm column — introduction, what I bring, two case studies told by skills, then the record */
+:root{
+--bg:#F4F5F7; --surface:#FFFFFF; --ink:#151A21; --muted:#596270; --line:#DCE0E6;
+--gold:#8F630F; --gold-soft:#F4EAD6; --teal:#0E6862; --teal-soft:#DDEFEC;
+--display:"Bricolage Grotesque","IBM Plex Sans Arabic",system-ui,sans-serif;
+--body:"IBM Plex Sans","IBM Plex Sans Arabic",system-ui,sans-serif;
+--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+--bg:#0E1115; --surface:#161B21; --ink:#E8EBEF; --muted:#9AA3B0; --line:#29313B;
+--gold:#E2B45C; --gold-soft:#2B2416; --teal:#62C4BA; --teal-soft:#14292A; color-scheme:dark}}
+:root[data-theme="dark"]{
+--bg:#0E1115; --surface:#161B21; --ink:#E8EBEF; --muted:#9AA3B0; --line:#29313B;
+--gold:#E2B45C; --gold-soft:#2B2416; --teal:#62C4BA; --teal-soft:#14292A; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+/* bilingual: every string exists twice; the root data-lang hides one */
+html[data-lang="en"] [lang="ar"], html[data-lang="ar"] [lang="en"]{display:none!important}
+html[data-lang="ar"] body{font-family:"IBM Plex Sans Arabic",var(--body)}
+html[data-lang="ar"] h1, html[data-lang="ar"] h2, html[data-lang="ar"] h3, html[data-lang="ar"] .big{font-family:"IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
+html[data-lang="ar"] .label{letter-spacing:0;font-family:"IBM Plex Sans Arabic",sans-serif;font-size:13px;text-transform:none}
+.page{max-width:1040px;margin:0 auto;padding-block:40px 64px;
+padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+display:grid;grid-template-columns:minmax(0,1fr);gap:64px}
+.page > *{min-width:0}
+.label{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0}
+h2{font:800 24px/1.2 var(--display);letter-spacing:-.01em;margin:0 0 20px}
+/* top bar */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{font:500 13px/1 var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:9px 14px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{border-color:var(--ink)}
+.btn.solid{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;align-items:start}
+.who{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:start}
+.photo{width:112px;height:112px;max-width:100%;border-radius:24px;object-fit:cover;border:1px solid var(--line);background:var(--surface)}
+.who h1{font:800 clamp(32px,4.4vw,46px)/1.02 var(--display);letter-spacing:-.03em;margin:0;text-wrap:balance}
+.role{margin:8px 0 0;font-weight:600;color:var(--muted)}
+.intro{grid-column:1/-1;margin:0;max-width:62ch;font-size:17px}
+.actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.mail{font-family:var(--mono);font-size:13px;user-select:all;word-break:break-all}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px var(--teal-soft);flex:none}
+.glance{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:20px 22px;display:grid;gap:14px}
+.glance dl{margin:0;display:grid;gap:12px}
+.glance div{display:grid;gap:2px}
+.glance dt{font:600 20px/1.15 var(--display);font-variant-numeric:tabular-nums}
+.glance dd{margin:0;font-size:14px;color:var(--muted)}
+/* what I bring */
+.bring{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pillar{border-top:3px solid var(--ink);padding-top:16px;display:grid;gap:8px;align-content:start}
+.pillar.g{border-color:var(--gold)} .pillar.t{border-color:var(--teal)}
+.pillar h3{margin:0;font:600 18px/1.3 var(--body)}
+.pillar p{margin:0;color:var(--muted);font-size:15px}
+.pillar .seen{font-size:13px;color:var(--ink)}
+/* case studies */
+.cases{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,3.2vw,34px);display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+.case > *{min-width:0}
+.case-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.case h3{font:800 clamp(24px,2.8vw,30px)/1.1 var(--display);letter-spacing:-.02em;margin:0}
+.case h3 small{font:600 .62em/1 "IBM Plex Sans Arabic",sans-serif;color:var(--muted);margin-inline-start:8px}
+.kicker{margin:8px 0 0;color:var(--muted);max-width:60ch}
+.meta{display:flex;gap:8px;flex-wrap:wrap}
+.tag{font:500 12px/1 var(--mono);padding:7px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap;text-decoration:none}
+.tag.live{color:var(--teal);border-color:currentColor}
+.tag.gold{color:var(--gold);border-color:currentColor}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.cols > *{min-width:0;display:grid;gap:20px;align-content:start}
+.block{display:grid;gap:10px}
+.block .label{margin-bottom:2px}
+ul.points{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+ul.points li{padding-inline-start:18px;position:relative}
+ul.points li::before{content:"";position:absolute;inset-inline-start:0;top:.75em;width:7px;height:2px;background:var(--muted)}
+.k ul.points li::before{background:var(--teal)} .g ul.points li::before{background:var(--gold)}
+.role-line{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:13px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
+.k .chips.skill span{background:var(--teal-soft);border-color:transparent;color:var(--teal);font-weight:500}
+.g .chips.skill span{background:var(--gold-soft);border-color:transparent;color:var(--gold);font-weight:500}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font:400 12px/1 var(--mono);padding:6px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line)}
+.weights{display:grid;gap:8px}
+.wbar{display:flex;height:30px;border-radius:8px;overflow:hidden;gap:2px}
+.wbar div{display:flex;align-items:center;padding-inline:10px;font:500 12px/1 var(--mono);color:var(--surface);white-space:nowrap;overflow:hidden;min-width:0}
+.wbar div:nth-child(1){flex:40;background:var(--teal)}
+.wbar div:nth-child(2){flex:30;background:color-mix(in oklab,var(--teal) 75%,var(--bg))}
+.wbar div:nth-child(3){flex:20;background:color-mix(in oklab,var(--teal) 52%,var(--bg))}
+.wbar div:nth-child(4){flex:10;background:color-mix(in oklab,var(--teal) 32%,var(--bg));color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--muted)}
+.legend b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.shots figure{margin:0;display:grid;gap:8px}
+.shots img{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:440/886;object-fit:cover;object-position:top;border-radius:18px;border:1px solid var(--line);background:var(--bg)}
+.shots figcaption{font-size:12px;color:var(--muted);text-align:center}
+.note{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px;margin:0}
+/* record */
+.timeline{display:grid;border-inline-start:1px solid var(--line)}
+.job{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:0 0 24px;padding-inline-start:22px;position:relative}
+.job::before{content:"";position:absolute;inset-inline-start:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
+.job:first-child::before{border-color:var(--ink)}
+.job h3{margin:0;font:600 17px/1.35 var(--body)}
+.job .org{color:var(--muted);font-size:14px;grid-column:1}
+.job time{font:400 13px/1.6 var(--mono);color:var(--muted);white-space:nowrap;grid-row:1;grid-column:2}
+.job p{grid-column:1/-1;margin:6px 0 0;font-size:15px;max-width:68ch}
+.panel{border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:grid;gap:6px;background:var(--surface)}
+.panel h3{margin:0;font:600 17px/1.35 var(--body)}
+.org{color:var(--muted);font-size:14px}
+.line{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.pill{font:500 12px/1 var(--mono);padding:6px 9px;border-radius:999px;background:var(--gold-soft);color:var(--gold)}
+.certs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:16px}
+.cert{border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden;display:grid;align-content:start;min-width:0}
+.cert img{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:520/367;object-fit:cover;object-position:top;border-bottom:1px solid var(--line);background:#fff}
+.cert > div{padding:12px 14px 14px;display:grid;gap:3px}
+.cert h3{margin:0;font:600 15px/1.35 var(--body)}
+.cert .org{font-size:13px}
+a.verify{font-size:13px;font-weight:500;color:var(--teal);text-decoration:none;border-bottom:1px solid currentColor;justify-self:start;margin-top:4px}
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 28px}
+.skills > div{display:grid;gap:10px;align-content:start;min-width:0}
+footer{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer p{margin:0;color:var(--muted);font-size:14px;max-width:56ch}
+@media (max-width:900px){
+.hero{grid-template-columns:minmax(0,1fr)}
+.bring,.skills{grid-template-columns:minmax(0,1fr)}
+.cols{grid-template-columns:minmax(0,1fr)}
+.certs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:520px){
+.who{grid-template-columns:minmax(0,1fr)}
+.photo{width:88px;height:88px;border-radius:20px}
+.shots{grid-template-columns:repeat(3,minmax(120px,1fr));overflow-x:auto;padding-bottom:6px}
+.certs{grid-template-columns:minmax(0,1fr)}
+.job{grid-template-columns:minmax(0,1fr)}
+.job time{grid-row:auto;grid-column:1}
+.wbar div{font-size:0;padding:0}
+}
+@media (prefers-reduced-motion:no-preference){
+.case,.cert,.btn{transition:border-color .2s ease}
+.case:hover{border-color:color-mix(in oklab,var(--ink) 25%,var(--line))}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="bar">
+<p class="label"><span lang="en">Portfolio · 2026</span><span lang="ar">ملف الأعمال · 2026</span></p>
+<button class="btn" id="lang" type="button"><span lang="en">العربية</span><span lang="ar">English</span></button>
+</div>
+<header class="hero">
+<div class="who">
+<img class="photo" src="img/photo.webp" alt="Mohammed Alsailani" width="360" height="360">
+<div>
+<h1><span lang="en">Mohammed Alsailani</span><span lang="ar">محمد السيلاني</span></h1>
+<p class="role"><span lang="en">Recent MIS graduate · Odoo ERP · Web &amp; mobile projects</span><span lang="ar">خريج نظم معلومات إدارية · Odoo ERP · مشاريع ويب وجوال</span></p>
+</div>
+<p class="intro">
+<span lang="en">I graduated with honors in Management Information Systems in 2026. I trained on Odoo ERP during my co-op, and in my own time I build web and mobile projects for real business needs. I'm looking for an entry-level role in business analysis, ERP systems or software development.</span>
+<span lang="ar">تخرّجت بمرتبة الشرف في نظم المعلومات الإدارية عام 2026. تدرّبت على نظام Odoo ERP خلال التدريب التعاوني، وأبني في وقتي الخاص مشاريع ويب وجوال لاحتياجات عمل حقيقية. أبحث عن فرصة وظيفية للمبتدئين في تحليل الأعمال أو أنظمة ERP أو تطوير البرمجيات.</span>
+</p>
+<div class="actions">
+<span class="mail" id="mail">mohammed.alsailani.7@gmail.com</span>
+<button class="btn solid" id="copy" type="button"><span lang="en">Copy email</span><span lang="ar">نسخ الإيميل</span></button>
+<a class="btn" href="https://www.linkedin.com/in/mohammed-alsailani-a33b871b9" target="_blank" rel="noopener">LinkedIn ↗</a>
+</div>
+<span class="status" style="grid-column:1/-1"><i></i><span lang="en">Open to entry-level roles · Jeddah</span><span lang="ar">متاح لفرص المبتدئين · جدة</span></span>
+</div>
+<aside class="glance" aria-label="At a glance">
+<p class="label"><span lang="en">At a glance</span><span lang="ar">نظرة سريعة</span></p>
+<dl>
+<div><dt>4.51 / 5.00</dt><dd><span lang="en">GPA · Second-Class Honors</span><span lang="ar">المعدل · مرتبة الشرف الثانية</span></dd></div>
+<div><dt>C1</dt><dd><span lang="en">English level · EF SET</span><span lang="ar">مستوى الإنجليزية · EF SET</span></dd></div>
+<div><dt>Odoo ERP</dt><dd><span lang="en">Co-op training · 2026</span><span lang="ar">تدريب تعاوني · 2026</span></dd></div>
+<div><dt>2</dt><dd><span lang="en">personal projects in progress</span><span lang="ar">مشروعان شخصيان قيد التطوير</span></dd></div>
+</dl>
+</aside>
+</header>
+<section aria-labelledby="h-bring">
+<h2 id="h-bring"><span lang="en">What I bring</span><span lang="ar">ما أقدّمه</span></h2>
+<div class="bring">
+<div class="pillar">
+<h3><span lang="en">Business &amp; ERP</span><span lang="ar">الأعمال وأنظمة ERP</span></h3>
+<p><span lang="en">I understand how business processes connect inside an ERP system, from my Odoo co-op and four seasons in retail sales.</span><span lang="ar">أفهم كيف تترابط إجراءات العمل داخل نظام ERP، من تدريبي على Odoo وأربعة مواسم في مبيعات التجزئة.</span></p>
+<span class="seen"><span lang="en">ProSys Technology · Golden Safe</span><span lang="ar">بروسيس للتقنية · الخزينة الذهبية</span></span>
+</div>
+<div class="pillar t">
+<h3><span lang="en">Building products</span><span lang="ar">بناء المنتجات</span></h3>
+<p><span lang="en">I take an idea from requirements to a working web or mobile app, including the database, the interface and deployment.</span><span lang="ar">أنقل الفكرة من المتطلبات إلى تطبيق ويب أو جوال يعمل، بما في ذلك قاعدة البيانات والواجهة والنشر.</span></p>
+<span class="seen"><span lang="en">Khotwa · Gold Booking System</span><span lang="ar">خطوة · نظام حجز الذهب</span></span>
+</div>
+<div class="pillar g">
+<h3><span lang="en">AI-assisted work</span><span lang="ar">العمل بمساعدة الذكاء الاصطناعي</span></h3>
+<p><span lang="en">I use AI tools such as Claude to work faster, and I review the results carefully before anything goes live.</span><span lang="ar">أستخدم أدوات الذكاء الاصطناعي مثل Claude لأعمل أسرع، وأراجع النتائج بعناية قبل اعتماد أي شيء.</span></p>
+<span class="seen"><span lang="en">Claude 101 certificate · Anthropic</span><span lang="ar">شهادة Claude 101 · Anthropic</span></span>
+</div>
+</div>
+</section>
+<section aria-labelledby="h-projects">
+<h2 id="h-projects"><span lang="en">Projects</span><span lang="ar">المشاريع</span></h2>
+<div class="cases">
+<article class="case k">
+<div class="case-head">
+<div>
+<h3>Khotwa <small>خطوة</small></h3>
+<p class="kicker"><span lang="en">An Arabic platform that helps Saudi high-school students prepare for the STEP English exam.</span><span lang="ar">منصة عربية تساعد طلاب الثانوية في السعودية على الاستعداد لاختبار STEP في اللغة الإنجليزية.</span></p>
+</div>
+<div class="meta">
+<span class="tag"><span lang="en">Jun 2026 – Present</span><span lang="ar">يونيو 2026 – الآن</span></span>
+<a class="tag live" href="https://khatwa-2026.vercel.app" target="_blank" rel="noopener"><span lang="en">Live site ↗</span><span lang="ar">الموقع ↗</span></a>
+</div>
+</div>
+<div class="cols">
+<div>
+<div class="block">
+<p class="label"><span lang="en">What it does</span><span lang="ar">ماذا تقدّم</span></p>
+<ul class="points">
+<li><span lang="en">A placement test that shows each student their current level.</span><span lang="ar">اختبار تحديد مستوى يوضح لكل طالب مستواه الحالي.</span></li>
+<li><span lang="en">A personal study plan with lessons and vocabulary practice.</span><span lang="ar">خطة دراسية شخصية مع دروس وتدريب على المفردات.</span></li>
+<li><span lang="en">Full-length mock exams with a results report.</span><span lang="ar">اختبارات تجريبية كاملة مع تقرير بالنتائج.</span></li>
+</ul>
+</div>
+<div class="weights">
+<p class="label"><span lang="en">Mock exams follow the official STEP weights</span><span lang="ar">الاختبارات التجريبية تتبع أوزان STEP الرسمية</span></p>
+<div class="wbar" role="img" aria-label="Reading 40%, Grammar 30%, Listening 20%, Writing analysis 10%"><div>40%</div><div>30%</div><div>20%</div><div>10%</div></div>
+<div class="legend">
+<span><b>40%</b> <span lang="en">Reading</span><span lang="ar">القراءة</span></span>
+<span><b>30%</b> <span lang="en">Grammar</span><span lang="ar">القواعد</span></span>
+<span><b>20%</b> <span lang="en">Listening</span><span lang="ar">الاستماع</span></span>
+<span><b>10%</b> <span lang="en">Writing analysis</span><span lang="ar">التحليل الكتابي</span></span>
+</div>
+</div>
+</div>
+<div>
+<div class="block">
+<p class="label"><span lang="en">My role</span><span lang="ar">دوري</span></p>
+<p class="role-line"><span lang="en">I planned, built and launched it end to end, using AI tools to speed up the work.</span><span lang="ar">خططت لها وبنيتها وأطلقتها من البداية للنهاية، مستعينًا بأدوات الذكاء الاصطناعي لتسريع العمل.</span></p>
+</div>
+<div class="block">
+<p class="label"><span lang="en">Skills shown</span><span lang="ar">المهارات</span></p>
+<div class="chips skill">
+<span lang="en">Full-stack web development</span><span lang="ar">تطوير الويب المتكامل</span>
+<span lang="en">Product thinking</span><span lang="ar">التفكير في المنتج</span>
+<span lang="en">Arabic (RTL) interfaces</span><span lang="ar">واجهات عربية (RTL)</span>
+<span lang="en">Automated testing</span><span lang="ar">الاختبارات الآلية</span>
+<span lang="en">AI-assisted development</span><span lang="ar">التطوير بمساعدة الذكاء الاصطناعي</span>
+</div>
+</div>
+<div class="block">
+<p class="label"><span lang="en">Tools</span><span lang="ar">الأدوات</span></p>
+<div class="stack" dir="ltr"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Supabase</span><span>Vercel</span></div>
+</div>
+</div>
+</div>
+</article>
+<article class="case g">
+<div class="case-head">
+<div>
+<h3><span lang="en">Gold Booking System</span><span lang="ar">نظام حجز أساور الذهب</span></h3>
+<p class="kicker"><span lang="en">A B2B app that lets jewelry shops book gold bangles from a wholesaler, ordered by weight.</span><span lang="ar">تطبيق B2B تحجز منه محلات المجوهرات أساور الذهب من تاجر الجملة، بالطلب حسب الوزن.</span></p>
+</div>
+<div class="meta">
+<span class="tag"><span lang="en">Sep 2026 – Present</span><span lang="ar">سبتمبر 2026 – الآن</span></span>
+<span class="tag gold"><span lang="en">Personal project</span><span lang="ar">مشروع شخصي</span></span>
+</div>
+</div>
+<div class="shots" aria-label="App screenshots">
+<figure><img src="img/gold-home.webp" alt="Home screen with the bangle collection" width="440" height="886"><figcaption><span lang="en">Home</span><span lang="ar">الرئيسية</span></figcaption></figure>
+<figure><img src="img/gold-categories.webp" alt="Bangle categories" width="440" height="886" loading="lazy"><figcaption><span lang="en">Categories</span><span lang="ar">الفئات</span></figcaption></figure>
+<figure><img src="img/gold-catalog.webp" alt="Catalog showing weight ranges in grams" width="440" height="886" loading="lazy"><figcaption><span lang="en">Catalog by weight</span><span lang="ar">الكتالوج بالوزن</span></figcaption></figure>
+</div>
+<div class="cols">
+<div>
+<div class="block">
+<p class="label"><span lang="en">What it does</span><span lang="ar">ماذا يقدّم</span></p>
+<ul class="points">
+<li><span lang="en">Shops browse the catalog and place orders by weight.</span><span lang="ar">تتصفح المحلات الكتالوج وتطلب بالوزن.</span></li>
+<li><span lang="en">The wholesaler reviews, prepares and hands over each order.</span><span lang="ar">يراجع تاجر الجملة كل طلب ويجهّزه ويسلّمه.</span></li>
+<li><span lang="en">Managers get order documents and reports in Arabic and English.</span><span lang="ar">تحصل الإدارة على مستندات الطلبات والتقارير بالعربية والإنجليزية.</span></li>
+</ul>
+</div>
+<div class="block">
+<p class="label"><span lang="en">My role</span><span lang="ar">دوري</span></p>
+<p class="role-line"><span lang="en">I turned a real wholesale workflow I saw while working in gold retail into a working mobile app and web admin panel.</span><span lang="ar">حوّلت إجراءات بيع بالجملة رأيتها خلال عملي في تجارة الذهب إلى تطبيق جوال ولوحة تحكم ويب تعمل.</span></p>
+</div>
+</div>
+<div>
+<div class="block">
+<p class="label"><span lang="en">Skills shown</span><span lang="ar">المهارات</span></p>
+<div class="chips skill">
+<span lang="en">Business analysis</span><span lang="ar">تحليل الأعمال</span>
+<span lang="en">Mobile &amp; web development</span><span lang="ar">تطوير الجوال والويب</span>
+<span lang="en">Database design</span><span lang="ar">تصميم قواعد البيانات</span>
+<span lang="en">Role-based access</span><span lang="ar">صلاحيات المستخدمين</span>
+<span lang="en">Workflow automation</span><span lang="ar">أتمتة سير العمل</span>
+</div>
+</div>
+<div class="block">
+<p class="label"><span lang="en">Tools</span><span lang="ar">الأدوات</span></p>
+<div class="stack" dir="ltr"><span>React Native</span><span>Expo</span><span>TypeScript</span><span>Supabase</span><span>Vercel</span></div>
+</div>
+<p class="note"><span lang="en">The app requires a login. I'm happy to give a live demo in an interview.</span><span lang="ar">التطبيق يتطلب تسجيل دخول، ويسعدني تقديم عرض مباشر له في المقابلة.</span></p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section aria-labelledby="h-exp">
+<h2 id="h-exp"><span lang="en">Experience</span><span lang="ar">الخبرات العملية</span></h2>
+<div class="timeline">
+<div class="job">
+<h3><span lang="en">MIS Co-op Intern</span><span lang="ar">متدرب تعاوني – نظم المعلومات الإدارية</span></h3>
+<time>Jan – May 2026</time>
+<div class="org"><span lang="en">ProSys Technology · Jeddah</span><span lang="ar">بروسيس للتقنية · جدة</span></div>
+<p><span lang="en">Worked across all Odoo ERP modules end to end and supported digital workflow improvements.</span><span lang="ar">عملت على جميع وحدات نظام Odoo ERP بشكل متكامل، وساهمت في تحسين سير العمل الرقمي.</span></p>
+</div>
+<div class="job">
+<h3><span lang="en">E-commerce &amp; Marketing Assistant</span><span lang="ar">مساعد تجارة إلكترونية وتسويق</span></h3>
+<time>Oct – Dec 2025</time>
+<div class="org"><span lang="en">Rawaye' Ard Al-Ahlam Ready-made Clothing · Jeddah</span><span lang="ar">روائع أرض الأحلام للملابس الجاهزة · جدة</span></div>
+<p><span lang="en">Kept the online store accurate and helped run promotional campaigns with the marketing team.</span><span lang="ar">حافظت على دقة المتجر الإلكتروني، وشاركت في الحملات الترويجية مع فريق التسويق.</span></p>
+</div>
+<div class="job">
+<h3><span lang="en">Sales &amp; Administrative Trainee (Seasonal)</span><span lang="ar">متدرب مبيعات وأعمال إدارية (موسمي)</span></h3>
+<time>Aug 2022 – Oct 2025</time>
+<div class="org"><span lang="en">Golden Safe Company for Gold &amp; Jewelry · Jeddah</span><span lang="ar">الخزينة الذهبية للذهب والمجوهرات · جدة</span></div>
+<p><span lang="en">Twelve months across four summer seasons in sales, customer service, cashiering and inventory records.</span><span lang="ar">اثنا عشر شهرًا على مدى أربعة مواسم صيفية في المبيعات وخدمة العملاء والكاشير وسجلات المخزون.</span></p>
+</div>
+</div>
+</section>
+<section aria-labelledby="h-edu">
+<h2 id="h-edu"><span lang="en">Education &amp; certificates</span><span lang="ar">التعليم والشهادات</span></h2>
+<div class="panel">
+<h3><span lang="en">B.Sc. Management Information Systems</span><span lang="ar">بكالوريوس نظم المعلومات الإدارية</span></h3>
+<div class="org"><span lang="en">Imam Abdulrahman Bin Faisal University · College of Business Administration · Aug 2021 – Jun 2026</span><span lang="ar">جامعة الإمام عبدالرحمن بن فيصل · كلية إدارة الأعمال · أغسطس 2021 – يونيو 2026</span></div>
+<div class="line"><span class="pill">GPA 4.51 / 5.00</span><span class="pill"><span lang="en">Excellent · Second-Class Honors</span><span lang="ar">ممتاز · مرتبة الشرف الثانية</span></span></div>
+</div>
+<div class="certs">
+<article class="cert">
+<img src="img/cert-claude101.webp" alt="Claude 101 course completion badge" width="520" height="367" loading="lazy">
+<div><h3>Claude 101</h3>
+<span class="org"><span lang="en">Claude Academy · Anthropic · Sep 2026</span><span lang="ar">Claude Academy · Anthropic · سبتمبر 2026</span></span>
+<a class="verify" href="https://academy.claude.com/verify/bb9c9182b810dba309fcaa710dc489d8" target="_blank" rel="noopener"><span lang="en">Verify ↗</span><span lang="ar">تحقق ↗</span></a></div>
+</article>
+<article class="cert">
+<img src="img/cert-efset.webp" alt="EF SET English certificate, C1 Advanced" width="520" height="367" loading="lazy">
+<div><h3><span lang="en">EF SET English · C1</span><span lang="ar">EF SET للإنجليزية · C1</span></h3>
+<span class="org"><span lang="en">EF Education First · 66/100 · Jun 2026</span><span lang="ar">EF Education First · 66/100 · يونيو 2026</span></span>
+<a class="verify" href="https://cert.efset.org/15Y67E" target="_blank" rel="noopener"><span lang="en">Verify ↗</span><span lang="ar">تحقق ↗</span></a></div>
+</article>
+<article class="cert">
+<img src="img/cert-flutter101.webp" alt="Flutter 101 certificate from Satr, Tuwaiq Academy" width="520" height="367" loading="lazy">
+<div><h3>Flutter 101</h3>
+<span class="org"><span lang="en">Satr · Tuwaiq Academy · Mar 2026</span><span lang="ar">سطر · أكاديمية طويق · مارس 2026</span></span></div>
+</article>
+<article class="cert">
+<img src="img/cert-flutter102.webp" alt="Flutter 102 certificate from Satr, Tuwaiq Academy" width="520" height="367" loading="lazy">
+<div><h3>Flutter 102</h3>
+<span class="org"><span lang="en">Satr · Tuwaiq Academy · May 2026</span><span lang="ar">سطر · أكاديمية طويق · مايو 2026</span></span></div>
+</article>
+</div>
+</section>
+<section aria-labelledby="h-skills">
+<h2 id="h-skills"><span lang="en">Skills</span><span lang="ar">المهارات</span></h2>
+<div class="skills">
+<div><p class="label"><span lang="en">Business &amp; data</span><span lang="ar">الأعمال والبيانات</span></p>
+<div class="chips"><span>Odoo ERP</span><span lang="en">Business analysis</span><span lang="ar">تحليل الأعمال</span><span lang="en">Workflow improvement</span><span lang="ar">تحسين سير العمل</span><span>Excel</span><span>Power BI</span></div></div>
+<div><p class="label"><span lang="en">Development &amp; AI</span><span lang="ar">التطوير والذكاء الاصطناعي</span></p>
+<div class="chips" dir="ltr"><span>TypeScript</span><span>React / Next.js</span><span>React Native</span><span>Supabase</span><span>Claude</span><span>Claude Code</span></div></div>
+<div><p class="label"><span lang="en">Languages</span><span lang="ar">اللغات</span></p>
+<div class="chips"><span lang="en">Arabic · Native</span><span lang="ar">العربية · اللغة الأم</span><span lang="en">English · Advanced (C1)</span><span lang="ar">الإنجليزية · متقدم (C1)</span></div></div>
+</div>
+</section>
+<footer>
+<p><span lang="en">Source code and internal project details are kept private. I'm happy to walk through both projects in an interview.</span><span lang="ar">الشيفرة المصدرية والتفاصيل الداخلية للمشاريع خاصة، ويسعدني شرح المشروعين في المقابلة.</span></p>
+<a class="btn" href="https://www.linkedin.com/in/mohammed-alsailani-a33b871b9" target="_blank" rel="noopener">LinkedIn ↗</a>
+</footer>
+</div>
+<script>
+(function(){
+var root=document.documentElement;
+function setLang(l){
+root.setAttribute('data-lang',l);
+root.setAttribute('lang',l);
+root.setAttribute('dir',l==='ar'?'rtl':'ltr');
+try{localStorage.setItem('lang',l)}catch(e){}
+}
+var start='en';
+try{start=localStorage.getItem('lang')||'en'}catch(e){}
+if(location.hash==='#ar')start='ar';
+if(location.hash==='#en')start='en';
+setLang(start);
+document.getElementById('lang').addEventListener('click',function(){
+setLang(root.getAttribute('data-lang')==='ar'?'en':'ar');
+});
+var copy=document.getElementById('copy');
+var label=copy.innerHTML;
+copy.addEventListener('click',function(){
+var text=document.getElementById('mail').textContent;
+var done=function(){copy.textContent=root.getAttribute('data-lang')==='ar'?'تم النسخ':'Copied';setTimeout(function(){copy.innerHTML=label},1600)};
+var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r)};
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fallback)}else{fallback()}
+});
+})();
+</script>
+</body>
+</html>
